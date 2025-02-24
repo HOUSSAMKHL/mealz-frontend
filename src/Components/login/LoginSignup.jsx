@@ -48,9 +48,9 @@ const handleSubmit = async (e) => {
     setLoading(true);
 
     try {
-        await axios.get('http://127.0.0.1:8000/sanctum/csrf-cookie', { withCredentials: true });
+        await axios.get('https://mealz-backend.onrender.com/sanctum/csrf-cookie', { withCredentials: true });
 
-        const url = `http://127.0.0.1:8000/api/${isSignup ? 'register' : 'login'}`;
+        const url = `https://mealz-backend.onrender.com/api/${isSignup ? 'register' : 'login'}`;
         const response = await axios.post(url, formData, { withCredentials: true });
 
         const userData = response.data.user;

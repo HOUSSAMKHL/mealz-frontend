@@ -52,8 +52,8 @@ const Commander = () => {
             };
 
            // console.log("✅ Données du client : ", clientData);
-            const clientResponse = await axios.post("http://localhost:8000/api/clients", clientData, { withCredentials: true });
-            const clientId = clientResponse.data.id; // 🔥 Récupérer l'ID du client
+           const clientResponse = await axios.post("https://mealz-backend.onrender.com/api/clients", clientData, { withCredentials: true });
+           const clientId = clientResponse.data.id; // 🔥 Récupérer l'ID du client
 
           //console.log("✅ Client créé avec ID:", clientId);
           

@@ -12,7 +12,7 @@ const OrderSummary = () => {
     const navigate = useNavigate();
 
     // ✅ Configure Axios defaults globally
-    axios.defaults.baseURL = "http://localhost:8000";
+    axios.defaults.baseURL = "https://mealz-backend.onrender.com";
     axios.defaults.withCredentials = true;
 
     //console.log("startDate", startDate);

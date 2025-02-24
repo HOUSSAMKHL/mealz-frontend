@@ -6,7 +6,7 @@ import axios from "axios";
 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
 const api = axios.create({
-    baseURL: "http://localhost:8000/api",
+    baseURL: "https://mealz-backend.onrender.com",
     headers: {
         "X-XSRF-TOKEN": csrfToken,
     },
@@ -15,7 +15,7 @@ const api = axios.create({
 // 🎯 Action asynchrone pour récupérer les repas
 export const fetchMeals = createAsyncThunk("meals/fetchMeals", async (_, thunkAPI) => {
     try {
-        const response = await api.get("/meals");
+        const response = await api.get("api/meals");
         return response.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
@@ -27,7 +27,7 @@ export const deleteMeal = createAsyncThunk(
     "meals/deleteMeal",
     async (mealId, thunkAPI) => {
         try {
-            await api.delete(`/meals/${mealId}`);
+            await api.delete(`api/meals/${mealId}`);
             return mealId; // Return the deleted meal ID to update the state
         } catch (error) {
             return thunkAPI.rejectWithValue(error.message);
@@ -40,7 +40,7 @@ export const updateMeal = createAsyncThunk(
     "meals/updateMeal",
     async ({ mealId, updatedMeal }, thunkAPI) => {
         try {
-            const response = await api.put(`/meals/${mealId}`, updatedMeal);
+            const response = await api.put(`api/meals/${mealId}`, updatedMeal);
             return response.data; // Return the updated meal data
         } catch (error) {
             return thunkAPI.rejectWithValue(error.message);
@@ -51,7 +51,7 @@ export const updateMeal = createAsyncThunk(
 // 🎯 Action asynchrone pour récupérer les clients
 export const fetchClients = createAsyncThunk("clients/fetchClients", async (_, thunkAPI) => {
     try {
-        const response = await api.get("/clients");
+        const response = await api.get("api/clients");
         return response.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
@@ -61,7 +61,7 @@ export const fetchClients = createAsyncThunk("clients/fetchClients", async (_, t
 // 🎯 Action asynchrone pour récupérer les plans
 export const fetchPlans = createAsyncThunk("plans/fetchPlans", async (_, thunkAPI) => {
     try {
-        const response = await api.get("/Plans");
+        const response = await api.get("api/Plans");
         return response.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
@@ -71,7 +71,7 @@ export const updatePlan = createAsyncThunk(
     "plans/updatePlan",
     async ({ planId, updatedPlan }, thunkAPI) => {
         try {
-            const response = await api.put(`/plans/${planId}`, updatedPlan);
+            const response = await api.put(`api/plans/${planId}`, updatedPlan);
             return response.data;
         } catch (error) {
             return thunkAPI.rejectWithValue(error.message);

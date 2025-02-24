@@ -149,7 +149,7 @@ const Pricing = () => {
                   اطلب هنا
                 </button>
                 {/* Afficher le bouton "تعديل" seulement si l'email de l'utilisateur correspond */}
-                {user && user.email === "Houssamkhalil.011@gmail.com" && (
+                {user && user.email === "Houssamkhalil.011@gmail.com"|| user?.email === "omarlahmoumi@gmail.com" && (
                   <button className="edit-button" onClick={() => openEditModal(plan)}>
                     تعديل
                   </button>

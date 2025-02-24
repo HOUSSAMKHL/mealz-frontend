@@ -23,7 +23,7 @@ const Menu = () => {
     // 🔹 Récupérer l'état de connexion depuis Redux
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
     const user = useSelector((state) => state.auth.user);
-    const isAdmin = user?.email === "Houssamkhalil.011@gmail.com" || user?.email === "omar@gmail.com";
+    const isAdmin = user?.email === "Houssamkhalil.011@gmail.com" || user?.email === "omarlahmoumi@gmail.com";
 
     const meals = useSelector((state) => state.order.meals); // AccÃ©der aux donnÃ©es depuis Redux
     const loading = useSelector((state) => state.order.loading);
