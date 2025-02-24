@@ -1,0 +1,217 @@
+#main {
+  margin-top: 6.5vw;
+  width: 100vw;
+  color: white;
+  background: linear-gradient(to right, rgb(145, 253, 135), rgb(22, 183, 7));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right; /* Alignement du texte en arabe */
+  padding: 20px;
+  font-size: 30px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+}
+
+/* Image */
+.imgsection img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+/* Texte */
+.textsection {
+  color: white;
+  max-width: 500px;
+}
+
+.textsection h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.textsection p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+/* Bouton */
+.btn {
+  /* Shared button styles */
+  display: inline-block; /* Make the <a> tag behave like a block-level element */
+  background-color: white; /* Dailymealz green */
+  color: rgb(32, 159, 15);
+  margin-top: 15px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove the underline from the link */
+  text-align: center;     /* Center the text */
+}
+
+.btn:hover {
+  background-color: #56e475; /* Darker green on hover */
+  color: white;
+}
+
+
+.partenariat-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.partenariat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacement entre les logos */
+  max-width: 900px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.partner-logo {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Pour que les logos gardent leur proportion */
+  filter: grayscale(20%); /* Optionnel : Effet légèrement désaturé */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.partner-logo img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* Media Queries */
+
+/* Pour الشاشات الصغيرة (الهواتف) */
+@media (max-width: 768px) {
+  #main {
+      margin-top: 15vw;
+      font-size: 20px; /* تصغير الخط */
+      padding: 10px;
+  }
+  .content {
+      flex-direction: column; /* عرض عمودي للعناصر */
+      align-items: center;
+      text-align: center; /* توسيط النص */
+      gap: 20px;
+  }
+
+  .imgsection img {
+      width: 80%; /* الصورة تأخذ مساحة أكبر */
+      max-width: 300px;
+  }
+
+  .textsection {
+      max-width: 90%;
+  }
+
+  .textsection h1 {
+      font-size: 2rem;
+  }
+
+  .textsection p {
+      font-size: 1rem;
+  }
+
+  .partenariat {
+      max-width: 100%;
+  }
+
+  .partner-logo {
+      width:78.5px;
+      height: 70px;
+  }
+}
+
+@media (max-width: 320px) {
+  #main {
+      margin-top: 20vw; /* Further reduce margin for smaller screens */
+      font-size: 16px;
+      padding: 5px;
+  }
+
+  .textsection h1 {
+      font-size: 1.5rem; /* Smaller heading for tiny screens */
+  }
+
+  .textsection p {
+      font-size: 0.9rem;
+  }
+
+  .imgsection img {
+      width: 90%; /* Image takes more width */
+      max-width: 250px; /* Reduce max width for small screens */
+  }
+
+  .partner-logo {
+      width: 60px;
+      height: 50px;
+  }
+}
+
+/* For Small screens (Phones) */
+@media (min-width: 321px) and (max-width: 480px) {
+  #main {
+      margin-top: 18vw;
+      font-size: 18px;
+      padding: 7px;
+  }
+
+  .textsection h1 {
+      font-size: 1.7rem;
+  }
+
+  .imgsection img {
+    margin-left: 40px;
+      max-width: 270px;
+  }
+
+  .partner-logo {
+      width: 68.5px;
+      height: 60px;
+  }
+}
+
+/* For Medium screens (Tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #main {
+      margin-top: 15vw;
+      font-size: 20px;
+      padding: 10px;
+  }
+
+  .textsection h1 {
+      font-size: 1.9rem;
+  }
+
+  .imgsection img {
+      max-width: 300px;
+  }
+
+  .partner-logo {
+      width: 78.5px;
+      height: 70px;
+  }
+}

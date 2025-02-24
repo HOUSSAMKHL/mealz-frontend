@@ -1,0 +1,244 @@
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px;
+  padding: 40px 20px;
+}
+
+.pricing-card {
+  width: 250px;
+  background: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.pricing-header {
+  border-radius: 15px 15px 50% 50%;
+  padding: 20px;
+  color: white;
+}
+
+.pricing-header h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.pricing-header h2 {
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+.pricing-header p {
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  color: black;
+}
+
+.pricing-features li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.pricing-button {
+  background-image: linear-gradient(135deg, rgb(251, 251, 251), rgb(44, 234, 27));
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.pricing-button:hover {
+  transform: scale(1.05);
+  background-image: linear-gradient(135deg, rgb(251, 251, 251), rgb(44, 234, 27));
+  cursor: pointer;
+}
+/* Style du modal */
+.modal-overlay {
+position: fixed;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.modal-content {
+background: white;
+padding: 20px;
+border-radius: 10px;
+width: 50%;
+height: 55%;
+max-width: 600px;
+text-align: center;
+position: relative;
+}
+.modal-content h1 {
+color: rgb(7, 177, 7);
+font-size: 2.5rem;
+border-bottom: #000000 solid 1px; 
+}
+
+.close-button {
+position: absolute;
+top: 10px;
+right: 15px;
+background: none;
+border: none;
+font-size: 20px;
+cursor: pointer;
+}
+
+.order-button {
+background: rgb(7, 177, 7);
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 10px;
+font-size: 1rem;
+margin-top: 20px;
+cursor: pointer;
+}
+.edit-button {
+  background-image: linear-gradient(135deg, rgb(255, 255, 255), rgb(28, 13, 237));
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.edit-button:hover {
+  transform: scale(1.05);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-form label {
+  margin-top: 10px;
+}
+
+.edit-form input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-button {
+  margin-top: 15px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+
+
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .pricing-container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start; /* Align items to the start */
+      align-items: center;
+      width: 100%;
+      height: auto;
+      overflow-x: auto; 
+      padding-bottom: 30px; /* Add some padding to the bottom for scroll indicator */
+    }
+  
+    .pricing-card {
+      width: 50%; /* Adjust the width as needed */
+      flex-shrink: 0; /* Prevent cards from shrinking */
+      box-sizing: border-box;
+      background: #ffffff;
+      border-radius: 20px;
+      text-align: center;
+      padding: 10px;
+      margin-left: 0;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  .pricing-header {
+    border-radius: 15px 15px 50% 50%;
+    padding: 5px;
+    color: white;
+  }
+  
+  .pricing-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .pricing-header h2 {
+    font-size: 1rem;
+  }
+  
+  .pricing-header p {
+    color: white;
+  }
+  
+  .pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    color: black;
+  }
+  
+  .pricing-features li {
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+  
+  .pricing-button {
+    color: white;
+    padding: 5px 5px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  
+  .pricing-button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}

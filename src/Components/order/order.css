@@ -1,0 +1,70 @@
+.order-summary {
+    width: 30%; /* Adjusted width */
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: fit-content;
+    position: sticky; /* Use sticky positioning */
+    top: 200px; /* Stick to top below header */
+    align-self: flex-start; /* Align to top of content */
+}
+
+.order-summary h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.order-item button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.order-btn {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.order-btn:not(:disabled):hover {
+    background-color: rgb(16, 193, 16);
+    transition: ease-out 0.3s;
+}
+
+.order-btn:disabled {
+    background: #ebebeb;
+    color: #999;
+    cursor: not-allowed;
+}
+/* Media Query for Mobile Devices (max-width: 768px) */
+@media (max-width: 768px ) {
+    .order-summary {
+        width: 100%; /* Take up full width on mobile */
+        position: sticky; /* Use fixed positioning */
+        bottom: 0; /* Stick to the bottom */
+        left: 0;   /* Stick to the left */
+        margin: 0; /* Remove default margins */
+        border-radius: 0; /* Remove rounded corners */
+        transform: none; /* Remove translateX to align to the left edge */
+    }
+
+    .order-summary h2 {
+        font-size: 16px; /* Further reduced heading size */
+    }
+}
