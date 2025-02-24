@@ -15,8 +15,7 @@ const Dashboard = () => {
   }, [isAuthenticated, navigate]);
 
   // Vérification de l'email pour définir le statut
-  const status = user?.email === "Houssamkhalil.011@gmail.com" || user?.email === "omarlahmoumi@gmail.com" ? "Admin" : "Client";
-
+  const status = user?.email === "Houssamkhalil.011@gmail.com" ? "Admin" : "Client";
 
   return (
     <div className="dashboard-container">
