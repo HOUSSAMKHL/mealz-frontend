@@ -3,7 +3,6 @@
     margin-bottom: 50px;
     width: 90vw; /* Prend toute la largeur de l'écran */
     padding: 30px;
-    
 }
 
 .dashboard-container h1 {
@@ -12,10 +11,11 @@
     font-size: 50px;
     color: #464444;
 }
-/*
+
+/* 
 background: white;
-    border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
 .user-info {
     background: #ebffee;
@@ -43,3 +43,4 @@ background: white;
 .orders-table tr:nth-child(even) {
     background: #f9f9f9;
 }
+*/
