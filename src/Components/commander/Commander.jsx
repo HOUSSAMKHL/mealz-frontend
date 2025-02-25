@@ -33,13 +33,14 @@ const Commander = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
+        // Vérifier si tous les champs sont remplis
         if (!formData.nomcomplet || !formData.telephone || !formData.Adresse || !selectedPlan) {
             alert('يرجى ملء جميع الحقول وإضافة وجبات قبل تأكيد الطلب.');
             console.log("Erreur : Champs incomplets.");
             return;
         }
-
+    
         try {
             // ✅ Créer d'abord le client
             const clientData = {
@@ -48,15 +49,20 @@ const Commander = () => {
                 adresse: formData.Adresse,
                 plan_id: selectedPlan.id,
                 order_id: orderId
-
             };
-
-           // console.log("✅ Données du client : ", clientData);
-           const clientResponse = await axios.post("https://mealz-backend.onrender.com/api/clients", clientData, { withCredentials: true });
-           const clientId = clientResponse.data.id; // 🔥 Récupérer l'ID du client
-           success();
-          //console.log("✅ Client créé avec ID:", clientId);
-          
+    
+            // console.log("✅ Données du client : ", clientData);
+            const clientResponse = await axios.post("https://mealz-backend.onrender.com/api/clients", clientData, { withCredentials: true });
+            const clientId = clientResponse.data.id; // 🔥 Récupérer l'ID du client
+    
+            // Si la réponse est réussie, affiche un message et redirige
+            alert("Commande créée avec succès");
+            setTimeout(() => {
+                navigate('/'); 
+            }, 400);
+    
+            console.log("✅ Client créé avec ID:", clientId);
+    
         } catch (error) {
             console.error("❌ Erreur lors de l'envoi:", error);
             if (error.response) {
@@ -70,12 +76,6 @@ const Commander = () => {
                 alert("⚠️ Une erreur est survenue, essayez encore.");
             }
         }
-    };
-    const success = () => {
-        alert("Commande créée avec succès");
-        setTimeout(() => {
-            navigate('/'); 
-        }, 400);
     };
     
     
