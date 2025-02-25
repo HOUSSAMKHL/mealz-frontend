@@ -21,6 +21,8 @@ const Pricing = () => {
     start_date: "",
     end_date: ""
   });
+  const adminEmails = ["Houssamkhalil.011@gmail.com", "omarlahmoumi@gmail.com"];
+
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -149,7 +151,7 @@ const Pricing = () => {
                   اطلب هنا
                 </button>
                 {/* Afficher le bouton "تعديل" seulement si l'email de l'utilisateur correspond */}
-                {user && user.email === "Houssamkhalil.011@gmail.com" && (
+                {user && adminEmails.includes(user.email) && (
                   <button className="edit-button" onClick={() => openEditModal(plan)}>
                     تعديل
                   </button>
