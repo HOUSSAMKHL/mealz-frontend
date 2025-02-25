@@ -7,4 +7,6 @@ export default defineConfig({
   build: {
     outDir: 'build',
   },
+  publicDir: 'public',  // Vérifie que le dossier 'public' est bien pris en compte
+
 })
