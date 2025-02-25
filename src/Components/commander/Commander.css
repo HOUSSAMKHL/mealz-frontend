@@ -124,17 +124,13 @@
 /* Responsivité pour Mobile */
 @media (max-width: 768px) {
     .form-container {
-        padding-top: 50px;
+        padding-top: 30px;
         flex-direction: column; /* Stack sections vertically */
     }
     .logo-container {
         position: sticky;
         margin-bottom: 30px;
     }
-    .form-left button{
-        margin-bottom: 50px;
-    }
-
     .form-left,
     .form-right {
         margin-top: 40px;
@@ -150,4 +146,14 @@
     .form-right p {
         font-size: 0.9em;
     }
+}
+@media (max-width: 381px) {
+    .form-container {
+        padding-top: 30px;
+        flex-direction: column; /* Stack sections vertically */
+    }
+    .form-left button{
+        margin-bottom: 70px;
+    }
+
 }
