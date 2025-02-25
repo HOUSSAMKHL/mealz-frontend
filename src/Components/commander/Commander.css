@@ -80,6 +80,7 @@
     cursor: pointer;
     transition: 0.3s;
     border-radius: 5px;
+    margin-bottom: 30px;
 }
 
 .form-left button:hover {
@@ -151,7 +152,30 @@
         font-size: 0.9em;
     }
 }
-@media (max-width: 768px) {
+@media (max-height: 667px) {
+    .form-container {
+        padding-top: 60px;
+        flex-direction: column; /* Stack sections vertically */
+    }
     .form-left button{
-        margin-bottom: 70px;
-    }}
+        margin-bottom: 100px;
+    }
+}
+@media (max-height: 480px) {
+    .form-container {
+        padding-top: 120px;
+        flex-direction: column; /* Stack sections vertically */
+    }
+    .logo-container {
+        position: sticky;
+        margin-bottom: 30px;
+    }
+    .form-left button{
+        margin-bottom: 140px;
+    }
+
+
+    .form-right h2 {
+        font-size: 1.3em;
+    }
+}
