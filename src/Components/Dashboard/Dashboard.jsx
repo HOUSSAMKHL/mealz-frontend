@@ -17,6 +17,9 @@ const Dashboard = () => {
   // Vérification de l'email pour définir le statut
   const adminEmails = ["Houssamkhalil.011@gmail.com", "omarlahmoumi@gmail.com"];
   const status = adminEmails.includes(user?.email) ? "Admin" : "Client";
+  console.log("Email connecté :", user?.email);
+console.log("Admin list :", adminEmails);
+
   
   return (
     <div className="dashboard-container">
