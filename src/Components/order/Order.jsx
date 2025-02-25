@@ -10,6 +10,8 @@ const OrderSummary = () => {
     const selectedMeals = useSelector(state => state.order.selectedMeals);
     const startDate = useSelector(state => state.order.startDate);
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+
 
     // ✅ Configure Axios defaults globally
     axios.defaults.baseURL = "https://mealz-backend.onrender.com";
@@ -119,12 +121,12 @@ const OrderSummary = () => {
                         </li>
                     ))}
             </ul>
-            <button 
-                className="order-btn" 
-                disabled={Object.keys(selectedMeals).length !== 5} // Disable button if not exactly 5 meals selected
+            <button
+                className="order-btn"
+                disabled={Object.keys(selectedMeals).length !== 5 || loading} // Disable if not exactly 5 meals or if loading
                 onClick={handleCommanderClick}
             >
-                تأكيد الطلب
+                {loading ? 'جاري إرسال الطلب...' : 'إرسال الطلب'}
             </button>
         </div>
     );
