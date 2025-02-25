@@ -54,7 +54,7 @@ const Commander = () => {
            // console.log("✅ Données du client : ", clientData);
            const clientResponse = await axios.post("https://mealz-backend.onrender.com/api/clients", clientData, { withCredentials: true });
            const clientId = clientResponse.data.id; // 🔥 Récupérer l'ID du client
-
+           success();
           //console.log("✅ Client créé avec ID:", clientId);
           
         } catch (error) {
@@ -95,7 +95,7 @@ const Commander = () => {
                     <input type="text" id="selectedPlan" name="selectedPlan" value={selectedPlan ? selectedPlan.titre : ''} readOnly />
                     <label htmlFor="OrderId">: رقم الطلب </label>
                     <input type="text" id="OrderId" name="OrderId" value={orderId ? orderId : ''} readOnly /> {/* Displaying orderId */}
-                    <button type="submit" onClick={()=>success()} >تأكيد</button>
+                    <button type="submit" >تأكيد</button>
                 </form>
             </div>
             <div className="form-right">
