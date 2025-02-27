@@ -11,7 +11,7 @@ function Footer() {
             <li>
             <address>
             المغرب، الدار البيضاء، سيدي معروف<br />
-            <a href="mailto:info@dailymealz.com">info@dailymealz.com</a><br />
+            <a href="mailto:info@dailymealz.com">info@mealz.com</a><br />
             <a href="tel:+212XXXXXXXXX">+212XXXXXXXXX</a>
           </address></li>
             </ul>
@@ -21,8 +21,8 @@ function Footer() {
           <div>
             <h4>المزيد</h4>
             <ul>
-              <li>كيف يعمل ديلي ميلز</li>
-              <li>حول ديلي ميلز</li>
+              <li>كيف يعمل ميلز</li>
+              <li>حول ميلز</li>
               <li>تعلم المزيد عن اشتراكاتنا</li>
               <li>مواقع مراكز التوصيل</li>
             </ul>
@@ -34,7 +34,7 @@ function Footer() {
             </ul>
             <h4>انضم إلينا</h4>
             <ul>
-              <li>كن سفيرًا لوجبات ديلي ميلز</li>
+              <li>كن سفيرًا لوجبات ميلز</li>
               <li>شارك في حملاتنا</li>
             </ul>
           </div>
@@ -50,22 +50,22 @@ function Footer() {
       </div>
 
       <div className="footer-social">
-        <a href="https://www.facebook.com/dailymealz" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/mealz" target="_blank" rel="noopener noreferrer">
           <FaFacebook />
         </a>
-        <a href="https://www.instagram.com/dailymealz" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/mealz" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
         </a>
-        <a href="https://www.twitter.com/dailymealz" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.twitter.com/mealz" target="_blank" rel="noopener noreferrer">
           <FaTwitter />
         </a>
-        <a href="https://www.linkedin.com/company/dailymealz" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/company/mealz" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
       </div>
 
       <div className="footer-bottom">
-        <p>©2024 ديلي ميلز | <a href="#">اتصل بنا</a> | <a href="#">سياسة الخصوصية</a></p>
+        <p>©2024 ميلز | <a href="#">اتصل بنا</a> | <a href="#">سياسة الخصوصية</a></p>
       </div>
     </footer>
   );

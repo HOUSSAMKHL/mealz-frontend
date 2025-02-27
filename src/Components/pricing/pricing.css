@@ -181,6 +181,7 @@ cursor: pointer;
       width: 100%;
       height: auto;
       overflow-x: auto; 
+      gap: 20px;
       padding-bottom: 30px; /* Add some padding to the bottom for scroll indicator */
     }
   

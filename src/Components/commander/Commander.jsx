@@ -51,7 +51,7 @@ const Commander = () => {
             };
     
             // console.log("✅ Données du client : ", clientData);
-            const clientResponse = await axios.post("https://mealz-backend.onrender.com/api/clients", clientData, { withCredentials: true });
+            const clientResponse = await axios.post("http://127.0.0.1:8000/api/clients", clientData, { withCredentials: true });
             const clientId = clientResponse.data.id; // 🔥 Récupérer l'ID du client
     
             // Si la réponse est réussie, affiche un message et redirige
@@ -60,7 +60,7 @@ const Commander = () => {
                 navigate('/'); 
             }, 400);
     
-            console.log("✅ Client créé avec ID:", clientId);
+            //console.log("✅ Client créé avec ID:", clientId);
     
         } catch (error) {
             console.error("❌ Erreur lors de l'envoi:", error);
