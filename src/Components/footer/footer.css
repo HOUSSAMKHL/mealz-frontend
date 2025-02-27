@@ -1,0 +1,160 @@
+/* General Footer Styles (as you have them) -  I'm including these for context */
+.footer {
+  background-color: white;
+  color: black;
+  padding: 40px 20px;
+  height: 100px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 200px;
+}
+
+.footer-logo-section {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: rgb(8, 153, 28);
+  margin: 0;
+}
+
+.footer-logo h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+ address {
+  font-style: normal;
+  line-height: 1.5;
+  color: #aeacac;
+}
+.footer-logo-section address a {
+  font-style: normal;
+  line-height: 1.5;
+  color: rgb(8, 153, 28);
+}
+
+.footer-links {
+  flex: 2 1 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: rgb(8, 153, 28);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: rgb(8, 153, 28);
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  height: 20px;
+  padding: 10px 0;
+}
+
+.footer-bottom a {
+  color: rgb(8, 153, 28);
+  text-decoration: none;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.footer-social a {
+  color: rgb(8, 153, 28);
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: #17e54e; /* Couleur dorée au survol */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px; /* Reduce padding on small screens */
+    height: auto; /* Allow the footer to grow in height as needed */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack the sections vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within sections */
+    height: auto; /* Allow the container to grow in height as needed */
+  }
+
+  .footer-logo-section {
+    margin-bottom: 30px; /* Increase margin for better spacing */
+  }
+
+  .footer-logo img {
+    max-width: 120px; /* Slightly reduce logo size */
+  }
+
+  .footer-links {
+    flex-direction: column; /* Stack the link columns */
+    align-items: center; /* Center link columns horizontally */
+    width: 100%; /* Make link section take full width */
+    margin-bottom: 20px; /* Add margin between link sections */
+  }
+
+  .footer-links ul {
+    margin-bottom: 20px; /* Add some spacing below each link list */
+  }
+
+  .footer-links h4 {
+    margin-top: 10px; /* Add some spacing above each link list */
+  }
+}
+
+/* Very Small Screens (e.g., Phones) - Optional, but often useful */
+@media (max-width: 480px) {
+  .footer-logo img {
+    max-width: 100px; /* Further reduce logo size */
+  }
+
+  .footer-logo p {
+    font-size: 12px; /* Further reduce paragraph size */
+  }
+
+  .footer-links h4 {
+    font-size: 0.9rem; /* Slightly reduce heading size */
+  }
+
+  .footer-links li {
+    font-size: 0.8rem; /* Slightly reduce list size */
+  }
+}

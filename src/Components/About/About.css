@@ -1,0 +1,48 @@
+/* Général */
+
+.why-meals {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-top: 130px;
+  }
+  
+  /* Titres */
+
+  
+  /* Ligne sous le titre */
+  .why-meals h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #0e8b0e;
+  }
+  
+  /* Paragraphe */
+  .why-meals p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    text-align: right; /* Pour l'alignement du texte en arabe */
+    margin-top: 10px;
+  }
+  
+  /* Espacement général */
+  .why-meals h2:first-child {
+    margin-top: 0;
+  }
+  
+  .why-meals p:first-child {
+    margin-top: 20px;
+  }
+  
+  /* Ajouter un effet hover aux titres */
+  .why-meals h2:hover {
+    color: #0b8218;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,166 @@
+/* Conteneur principal */
+.form-container {
+    display: flex;
+    width: 100vw;  /* Pleine largeur de l'écran */
+    min-height: 100vh; /* Hauteur minimale pour éviter le décalage */
+    background: white;
+    overflow: hidden;
+}
+
+/* Section gauche - Formulaire */
+.form-left {
+    width: 50%;
+    min-height: 100vh;
+    padding: 40px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Permet de prendre l'espace restant */
+}
+
+.form-left h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-left form {
+    width: 100%;
+    max-width: 350px;
+}
+
+.form-left label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+.form-left input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    outline: none;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.form-left input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+.form-left input[type="number"]::-webkit-inner-spin-button,
+.form-left input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-left input:focus {
+    border-bottom: 2px solid rgb(22, 183, 7);
+}
+
+/* Bouton de soumission */
+.form-left button {
+    width: 100%;
+    padding: 12px;
+    background: rgb(22, 183, 7);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 40px; /* Ajustement pour éviter un trop grand écart */
+}
+
+.form-left button:hover {
+    background: rgb(35, 163, 23);
+}
+
+/* Section droite - Informations */
+.form-right {
+    width: 50%;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(145, 253, 135), rgb(22, 183, 7));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.form-right h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-right p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Logo */
+.logo-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Responsivité pour Mobile */
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+
+    .form-left,
+    .form-right {
+        width: 100%;
+        min-height: 50vh; /* Permet de garder de l’espace */
+        padding: 20px;
+    }
+
+    .form-left button {
+        margin-bottom: 50px; /* Ajustement pour éviter le décalage */
+    }
+
+    .form-right h2 {
+        font-size: 1.3em;
+    }
+
+    .form-right p {
+        font-size: 0.9em;
+    }
+}
+
+/* Ajustement pour petits écrans (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .form-left button {
+        margin-bottom: 60px;
+    }
+
+    .form-right h2 {
+        font-size: 1.1em;
+    }
+
+    .form-right p {
+        font-size: 0.8em;
+    }
+}

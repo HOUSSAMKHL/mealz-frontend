@@ -1,0 +1,530 @@
+/* General Styles (as provided) */
+
+.menu-container {
+    display: flex;
+}
+
+.sections {
+    width: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    font-size: 20px;
+    overflow-y: auto;
+}
+
+.sections p {
+    font-size: 20px;
+    color: #d4a017;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 30px;
+    border-bottom: 2px solid #eee;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.sections a:hover {
+    background-color: #f8f8f8;
+    color: #d4a017;
+}
+
+.sections a:focus,
+.sections a.active {
+    font-weight: bold;
+    color: #d4a017;
+}
+
+.main-content {
+    width: 80%;
+    margin-left: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.promotions, .topVentes, .combos, .full-box, .Boissons, .plats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.promotions ul, .topVentes ul, .Boissons ul, .plats ul, .combos ul, .full-box ul {
+    list-style: none;
+    background: white;
+    padding: 15px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.Boissons img {
+    width: 90%;
+    height: 250px;
+}
+
+.Boissons .addbtn {
+    cursor: pointer;
+    margin-left: 90%;
+    width: 30px;
+    height: 30px;
+}
+
+#days-container {
+    margin-left: 10px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.days {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: #555;
+}
+
+.days li {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.days li input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin-right: 8px;
+    position: relative;
+}
+
+.days li input[type="radio"]:checked {
+    border-color: green;
+    background-color: lightgreen;
+}
+
+.days li input[type="radio"]:checked::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.days li label {
+    cursor: pointer;
+}
+
+.days li.selected {
+    background-color: #f0f8ff;
+}
+
+.completed-icon {
+    color: green;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.addbtn{
+    cursor: pointer;
+    margin-left: 90%;
+    width: 30px;
+    height: 30px;
+}
+
+.menulogo{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+/* Style pour la section de modification */
+
+
+.edit-meal h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.edit-meal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-meal form div {
+    margin-bottom: 15px;
+}
+
+.edit-meal label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.edit-meal input,
+.edit-meal textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.edit-meal textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+.edit-meal input:focus,
+.edit-meal textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.edit-meal button {
+    padding: 10px 15px;
+    background-color: rgb(27, 68, 180);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-meal button:hover {
+    background-color: rgb(70, 112, 228);
+}
+.edit-meal {
+    position: relative; /* Ajoute ceci pour que .close-btn soit bien positionné à l'intérieur */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Message d'erreur */
+.edit-meal .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.operations{
+    margin-left: 50px;
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.editbtn{
+    border: none;
+    padding: 7px;
+    color: white;
+    background-color: rgb(27, 68, 180);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.editbtn:hover{
+    background-color: rgb(70, 112, 228);
+    transition: ease-out 0.5s;
+}
+.delbtn{
+    border: none;
+    padding: 7px;
+    color: white;
+    background-color: rgb(223, 11, 11);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.delbtn:hover{
+    background-color: rgb(240, 49, 49);
+    transition: ease-out 0.5s;
+}
+/* Responsive Design */
+
+/* Larger Tablets and Smaller Desktops */
+@media (max-width: 1024px) {
+    .sections {
+        font-size: 14px;
+    }
+
+    .promotions ul, .topVentes ul, .Boissons ul, .plats ul, .combos ul, .full-box ul {
+    list-style: none;
+    background: white;
+    padding: 15px;
+    width: calc(50% - 20px);     }
+    
+    img {
+        max-width: 100%;
+        height: auto; 
+         display: block;
+      }
+      
+
+    .Boissons img {
+        height: 150px;
+    }
+    .edit-meal {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .edit-meal h2 {
+        font-size: 18px;
+    }
+
+    .edit-meal input,
+    .edit-meal textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .edit-meal button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .operations {
+        margin-left: 0;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .editbtn, .delbtn {
+        font-size: 14px;
+        padding: 7px 12px;
+    }
+
+}
+
+/* General Mobile Styles (Up to 768px) */
+@media (max-width: 768px) {      
+    .menu-container {
+        flex-direction: column;
+    }
+
+    /* Style for Sections */
+    .sections {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        font-size: 16px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background-color: white;
+        padding: 10px;
+        z-index: 101; /* Stay on top of everything */
+    }
+    .sections p {
+        padding: 0px;
+        border-bottom: 2px solid #eee;
+    }
+
+    .sections a {
+        display: block;
+        padding: 8px 12px;
+        border-radius: 5px;
+        margin-right: 5px;
+        text-decoration: none;
+        color: black;
+        white-space: nowrap;
+    }
+
+    .sections a:hover {
+        background-color: #f8f8f8;
+        color: #d4a017;
+    }
+
+    .sections a:focus,
+    .sections a.active {
+        font-weight: bold;
+        color: #d4a017;
+    }
+    .sections::-webkit-scrollbar {
+        display: none; /* Hide scrollbar */
+    }   
+
+    /* Updated Style for Days Container */
+    #days-container {
+        position: sticky; /* Keep it sticky */
+        top: 90px;      /* Stick below .sections (adjust as needed) */
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background-color: white;
+        padding: 10px;
+        z-index: 100; /* Go underneath everything else */
+         }
+        #days-container::-webkit-scrollbar {
+        display: none; /* Hide scrollbar */
+    }
+    #days-container li {
+        left: 0;             /* Explicitly set left to 0 */
+        margin-right: 8px;   /* Add margin to the right */
+        border-radius: 25px;
+
+    }
+    
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .promotions ul, .topVentes ul, .Boissons ul, .plats ul, .combos ul, .full-box ul {
+        width: calc(50% - 20px);
+    }
+
+    .Boissons img {
+        height: 200px;
+    }
+
+    .addbtn {
+        width: 25px;
+        height: 25px;
+        margin-left: 85%;
+    }
+    .edit-meal {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .edit-meal h2 {
+        font-size: 18px;
+    }
+
+    .edit-meal input,
+    .edit-meal textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .edit-meal button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .operations {
+        margin-left: 0;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .editbtn, .delbtn {
+        font-size: 14px;
+        padding: 7px 12px;
+    }
+
+}
+
+/* Smaller Mobile Devices (Up to 480px) */
+@media (max-width: 480px) {
+    .sections {
+        font-size: 14px;
+    }
+
+    .promotions ul, .topVentes ul, .Boissons ul, .plats ul, .combos ul, .full-box ul {
+    list-style: none;
+    background: white;
+    padding: 15px;
+    width: calc(50% - 20px);     }
+    
+    img {
+        max-width: 100%;
+        height: auto; 
+         display: block;
+      }
+      
+
+    .Boissons img {
+        height: 150px;
+    }
+    .edit-meal {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .edit-meal h2 {
+        font-size: 16px;
+    }
+
+    .edit-meal input,
+    .edit-meal textarea {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .edit-meal button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .editbtn, .delbtn {
+        width: 100%;
+        padding: 8px ;
+        font-size: 14px;
+    }
+
+}

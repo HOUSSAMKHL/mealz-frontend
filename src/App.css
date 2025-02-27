@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: white;
+  color: black;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    display: block;
+  }
+}

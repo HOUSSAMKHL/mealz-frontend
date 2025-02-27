@@ -1,0 +1,264 @@
+
+
+/* Conteneur principal */
+.form-container {
+  display: flex;
+  width: 100vw;  /* Pleine largeur de l'écran */
+  height: 100vh; /* Pleine hauteur de l'écran */
+  background: white;
+  overflow: hidden;
+}
+
+/* Section gauche - Formulaire */
+.form-left {
+  width: 50%;
+  height: 100vh;
+  padding: 40px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centrer horizontalement */
+}
+
+.form-left h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-left form {
+  width: 100%;
+  max-width: 350px; /* Empêcher une trop grande largeur */
+}
+
+.form-left label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-top: 10px;
+}
+.error{
+  color: red;
+}
+
+.form-left input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+.form-left input[type="number"] {
+  -moz-appearance: textfield; /* Supprime les flèches sur Firefox */
+  appearance: none; /* Supprime les flèches sur les navigateurs modernes */
+}
+
+.form-left input[type="number"]::-webkit-inner-spin-button,  
+.form-left input[type="number"]::-webkit-outer-spin-button {  
+  -webkit-appearance: none;  
+  margin: 0;  
+}
+
+
+.form-left input:focus {
+  border-bottom: 2px solid rgb(22, 183, 7);
+}
+
+/* Bouton de soumission */
+/* زر تبديل الفورم */
+.form-left button[type="button"] {
+  background: none; /* خلفية شفافة */
+  color: rgb(22, 183, 7); /* نفس لون الزر الرئيسي */
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: underline; /* إضافة خط تحت النص */
+}
+
+/* Section droite - Informations */
+.form-right {
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(145, 253, 135), rgb(22, 183, 7));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.form-right h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-right p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.logo-container {
+  position:fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+.switch-button{
+  width: 50px;
+  margin-top: 20px;
+}
+
+/* Responsivité pour Mobile */
+@media (max-width: 768px){
+  .form-container {
+    
+    flex-direction: column; /* Stack sections vertically */
+  }
+  .logo-container {
+      position: sticky;
+      margin-bottom: 30px;
+  }
+  
+
+  .form-left,
+  .form-right {
+      margin-top: 40px;
+      width: 100%; /* Full width for smaller screens */
+      height: 50vh; /* Each section takes half the *viewport* height */
+      padding: 20px;
+      
+  }
+  .form-right {
+    padding-bottom: 200px;
+  }
+
+
+  .form-right h2 {
+      font-size: 1em;
+  }
+
+  .form-right p {
+      font-size: 0.9em;
+  }
+}
+@media (max-width: 481px) {
+  .form-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .form-left {
+    margin-top: 60px;
+  }
+  .form-right {
+    padding-bottom: 150px;
+    height: 86vw;
+  }
+
+  .form-left input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .form-left button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .form-right p {
+    font-size: 12px;
+  }
+
+  .logo-container {
+    top: 10px;
+    right: 10px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .switch-button {
+    width: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 381px) {
+  .form-container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .form-left {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form-left h2 {
+    font-size: 18px; /* Réduction de la taille du titre */
+  }
+
+  .form-left label {
+    font-size: 12px;
+  }
+
+  .form-left input {
+    font-size: 12px;
+    padding: 8px;
+    margin-bottom: 10px; /* Réduction des marges pour éviter le débordement */
+  }
+
+  .form-left button {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-top: 10px;
+  }
+
+  .form-right {
+    width: 100%;
+    height: 50vh;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .form-right h2 {
+    font-size: 16px;
+  }
+
+  .form-right p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .logo-container {
+    top: 5px;
+    right: 5px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .switch-button {
+    width: 30px;
+    margin-bottom: 20px;
+  }
+}
